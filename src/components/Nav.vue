@@ -15,7 +15,7 @@ const navData: NavItemData[] = [
 
 <template>
   <nav class="bg-blue-700 shadow">
-    <ul class="flex list-none justify-around gap-2 md:justify-start">
+    <ul class="flex list-none justify-around md:justify-start">
       <NavItem v-for="item in navData" :href="item.href" :text="item.text" />
     </ul>
   </nav>

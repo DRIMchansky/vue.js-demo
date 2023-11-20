@@ -1,6 +1,8 @@
 import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router'
 
+import Posts from '../pages/Posts.vue'
 import Home from '../pages/Home.vue'
+import Todo from '../pages/Todo.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -11,12 +13,12 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/todo',
     name: 'todo',
-    component: () => import('../pages/Todo.vue')
+    component: Todo
   },
   {
     path: '/posts',
     name: 'posts',
-    component: () => import('../pages/Posts.vue')
+    component: Posts
   }
 ]
 
