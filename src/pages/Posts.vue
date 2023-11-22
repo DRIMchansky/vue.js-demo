@@ -1,7 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Posts from '../features/Posts/Posts.vue'
+</script>
 
 <template>
-  <div>Posts</div>
+  <Posts />
 </template>
 
 <style scoped></style>

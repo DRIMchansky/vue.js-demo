@@ -5,12 +5,10 @@ import TodoList from './TodoList.vue'
 </script>
 
 <template>
-  <div class="mx-auto mt-5 max-w-3xl">
-    <PageHeader text="ToDo App" />
+  <PageHeader text="ToDo App" />
 
-    <TodoCreator />
-    <TodoList />
-  </div>
+  <TodoCreator />
+  <TodoList />
 </template>
 
 <style scoped></style>
