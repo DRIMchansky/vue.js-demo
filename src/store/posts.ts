@@ -1,5 +1,5 @@
-import { defineStore } from 'pinia'
 import { ComputedRef, computed, ref } from 'vue'
+import { defineStore } from 'pinia'
 
 export type Post = {
   id: number
