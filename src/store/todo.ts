@@ -8,8 +8,10 @@ type TodoItem = {
   id: string
 }
 
+export const TODO_STORE_ID = 'todo'
+
 export const useTodoStore = defineStore(
-  'todo',
+  TODO_STORE_ID,
   () => {
     const todos = ref<TodoItem[]>([])
 

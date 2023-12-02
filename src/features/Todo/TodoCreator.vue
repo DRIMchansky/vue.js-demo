@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+import { TODO_INPUT_PLACEHOLDER } from '../../constsnts'
 import { useTodoStore } from '../../store/todo'
 
 const newTodo = ref('')
@@ -23,7 +24,7 @@ const handleSubmit = () => {
         class="block w-full rounded-md border-2 border-solid border-zinc-800 p-2"
         type="text"
         autocomplete="off"
-        placeholder="A thing to do"
+        :placeholder="TODO_INPUT_PLACEHOLDER"
       />
       <button
         :disabled="!newTodo"

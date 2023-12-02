@@ -14,18 +14,19 @@ const todoStore = useTodoStore()
     <div class="mt-4 flex gap-2">
       <span class=""
         >Num todos:
-        <b>{{ todoStore.numTodos }}</b>
+        <b data-testid="num-todos">{{ todoStore.numTodos }}</b>
       </span>
       <span class=""
-        >Num checked: <b>{{ todoStore.numCheckedTodos }}</b>
+        >Num checked: <b data-testid="num-todos-checked">{{ todoStore.numCheckedTodos }}</b>
       </span>
     </div>
 
-    <transition-group name="todo" tag="ul" class="mt-4 flex flex-col gap-4">
+    <transition-group name="todo" tag="ul" class="mt-4 flex flex-col gap-4" data-testid="todo-list">
       <TodoItem
         v-for="item in todoStore.sortedTodos"
         :text="item.text"
         :checked="item.checked"
+        :class="{ completed: item.checked }"
         :key="item.id"
         @checked="todoStore.toggleTodoChecked(item.id)"
         @delete="todoStore.deleteTodo(item.id)"
